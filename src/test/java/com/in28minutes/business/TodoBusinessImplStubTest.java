@@ -16,7 +16,7 @@ public class TodoBusinessImplStubTest {
 		TodoService todoService = new TodoServiceStub();
 		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 		List<String> todos = todoBusinessImpl
-				.retrieveTodosRelatedToSpring("Ranga");
+				.retrieveTodosRelatedToSpring("Spring");
 		assertEquals(2, todos.size());
 	}
 }

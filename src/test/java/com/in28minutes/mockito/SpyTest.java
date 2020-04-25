@@ -32,6 +32,7 @@ public class SpyTest {
 		listSpy.add("in28Minutes");
 
 		stub(listSpy.size()).toReturn(-1);
+		listSpy.add("dummy");
 
 		assertEquals(-1, listSpy.size());
 		assertEquals("Ranga", listSpy.get(0));

@@ -38,7 +38,7 @@ public class TodoBusinessImplMockitoTest {
 		List<String> allTodos = Arrays.asList("Learn Spring MVC",
 				"Learn Spring", "Learn to Dance");
 
-		//given
+		//given BDD style
 		given(todoService.retrieveTodos("Ranga")).willReturn(allTodos);
 
 		//when

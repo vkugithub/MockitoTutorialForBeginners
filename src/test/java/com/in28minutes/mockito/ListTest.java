@@ -18,6 +18,7 @@ public class ListTest {
 	@Test
 	public void letsMockListSize() {
 		List list = mock(List.class);
+		//stubbing or mocking size method
 		when(list.size()).thenReturn(10);
 		assertEquals(10, list.size());
 	}
@@ -33,6 +34,7 @@ public class ListTest {
 	@Test
 	public void letsMockListGet() {
 		List<String> list = mock(List.class);
+		//stubbing or mocking get method
 		when(list.get(0)).thenReturn("in28Minutes");
 		assertEquals("in28Minutes", list.get(0));
 		assertNull(list.get(1));
@@ -41,6 +43,7 @@ public class ListTest {
 	@Test(expected = RuntimeException.class)
 	public void letsMockListGetToThrowException() {
 		List<String> list = mock(List.class);
+		//Argument matcher
 		when(list.get(Mockito.anyInt())).thenThrow(
 				new RuntimeException("Something went wrong"));
 		list.get(0);
@@ -60,7 +63,7 @@ public class ListTest {
 	public void bddAliases_UsingGivenWillReturn() {
 		List<String> list = mock(List.class);
 
-		//given
+		//given is BBD style of stubbing get method
 		given(list.get(Mockito.anyInt())).willReturn("in28Minutes");
 
 		//then

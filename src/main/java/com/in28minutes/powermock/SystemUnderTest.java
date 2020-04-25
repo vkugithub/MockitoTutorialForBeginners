@@ -17,11 +17,11 @@ public class SystemUnderTest {
 
 	public int methodCallingAStaticMethod() {
 		//privateMethodUnderTest calls static method SomeClass.staticMethod
-		List<Integer> stats = dependency.retrieveAllStats();
-		long sum = 0;
-		for (int stat : stats)
-			sum += stat;
-		return UtilityClass.staticMethod(sum);
+//		List<Integer> stats = dependency.retrieveAllStats();
+//		long sum = 0;
+//		for (int stat : stats)
+//			sum += stat;
+		return UtilityClass.staticMethod(0);
 	}
 
 	private long privateMethodUnderTest() {
